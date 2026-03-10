@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optify App</title>
+    <style>
+        :root { --primary: #2ecc71; --primary-dark: #27ae60; --dark: #2c3e50; --light: #f5f6fa; --white: #ffffff; }
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--light); margin: 0; padding: 20px; }
+        .container { max-width: 400px; margin: 0 auto; background: var(--white); border-radius: 20px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .logo { text-align: center; margin-bottom: 30px; }
+        .clover { width: 60px; height: 60px; }
+        .clover path { fill: var(--primary); }
+        h1 { color: var(--dark); margin: 15px 0 5px; }
+        .tagline { color: #7f8c8d; margin: 0 0 25px; }
+        .btn { width: 100%; padding: 15px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border: none; border-radius: 12px; font-size: 1rem; font-weight: bold; cursor: pointer; margin: 10px 0; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        .card { background: var(--light); padding: 20px; border-radius: 12px; margin: 15px 0; }
+        .card h3 { margin: 0 0 15px; color: var(--dark); }
+        .savings { font-size: 2.5rem; color: var(--primary); font-weight: bold; text-align: center; margin: 10px 0; }
+        .comparison { display: flex; gap: 10px; margin-top: 15px; }
+        .comp-col { flex: 1; text-align: center; padding: 15px; border-radius: 10px; }
+        .comp-old { background: #ffeaa7; color: #d35400; }
+        .comp-new { background: #d5f5e3; color: var(--primary-dark); }
+        .price { font-size: 1.5rem; font-weight: bold; display: block; margin-top: 5px; }
+        .nav-link { text-align: center; display: block; margin-top: 20px; color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg class="clover" viewBox="0 0 100 100">
+                <path d="M50 50 C50 50 20 20 20 35 C20 50 35 50 50 50 C50 50 20 80 35 80 C50 80 50 65 50 50 C50 50 80 80 80 65 C80 50 65 50 50 50 C50 50 80 20 65 20 C50 20 50 35 50 50 Z"/>
+                <circle cx="50" cy="50" r="8" fill="#27ae60"/>
+            </svg>
+            <h1>Optify</h1>
+            <p class="tagline">Ahorra en tu factura de luz</p>
+        </div>
+        
+        <button class="btn" onclick="alert('📸 Función de subida de factura\n\nEn la versión completa, aquí se abriría la cámara o galería para subir tu factura de luz.')">📸 Subir Factura</button>
+        
+        <div class="card">
+            <h3>💰 Tu Ahorro Acumulado</h3>
+            <div class="savings">245€</div>
+            <p style="text-align: center; color: #7f8c8d; margin: 0;">Este año con Optify</p>
+        </div>
+        
+        <div class="card">
+            <h3>📊 Comparativa de Tarifas</h3>
+            <div class="comparison">
+                <div class="comp-col comp-old">
+                    <small>Tu tarifa actual</small>
+                    <span class="price">85€</span>
+                    <small>/mes</small>
+                </div>
+                <div class="comp-col comp-new">
+                    <small>Con Optify</small>
+                    <span class="price">64€</span>
+                    <small>/mes</small>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--primary); font-weight: bold; margin-top: 15px;">✨ Ahorras 21€/mes</p>
+        </div>
+        
+        <a href="/crm" class="nav-link">Ir al Panel CRM →</a>
+    </div>
+</body>
+</html>
